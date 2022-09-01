@@ -1,0 +1,33 @@
+
+.tweet{
+  padding: 10px;
+}
+.tweet-text{
+  font-size: 13px;
+  color: gray;
+}
+
+.tweet-sentiment{
+  font-size: large;
+      font-weight: bold;
+  
+  &.negative{
+    color:red;
+  }
+
+  &.positive{
+    color: green;
+  }
+}
+
+.sentiment-terms{
+  background-color: whitesmoke;
+    padding: 3px 5px;
+}
+
+.sentiment-term{
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+    margin-right: 20px;
+}

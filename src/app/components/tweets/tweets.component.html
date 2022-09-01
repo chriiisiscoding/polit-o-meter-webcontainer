@@ -1,0 +1,8 @@
+<mat-toolbar>
+	<span>Tweets</span>
+</mat-toolbar>
+
+<div *ngFor="let party of tweets">
+  {{party.name}}
+	<tweet  *ngFor="let tweet of party.tweets" [tweet]="tweet"></tweet>
+</div>

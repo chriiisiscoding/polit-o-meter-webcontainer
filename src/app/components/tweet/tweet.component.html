@@ -1,0 +1,10 @@
+
+<div class="tweet">
+<div class="tweet-text">{{tweet.text}}</div>
+<div class="tweet-sentiment" [ngClass]="{'negative': tweet.sentiment.comparative < 0, 'positive': tweet.sentiment.comparative > 0}" *ngIf="tweet.sentiment">{{tweet.sentiment.comparative | number:'1.0-2'}}</div>
+<div   *ngIf="tweet.sentiment" class="sentiment-terms">
+  <span *ngFor="let word of tweet.sentiment.words" class="sentiment-term">
+  {{word}}
+  </span>
+  </div>
+</div>

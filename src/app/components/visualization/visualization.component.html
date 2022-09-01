@@ -1,0 +1,21 @@
+
+
+<mat-toolbar>
+  <span>Sentiment Trends</span>
+</mat-toolbar>
+
+
+  
+  <div class="flex">
+  <div class="flex-item">
+    <div style="display: block;">
+    <canvas baseChart width="400" height="400"
+                [datasets]="lineChartData"
+                [labels]="settings.chartLabels"
+                [options]="settings.chartOptions"
+                [colors]="settings.chartColors"
+                [legend]="settings.hasLegend"
+                [chartType]="settings.chartType"></canvas>
+    </div>
+  </div>
+</div>
