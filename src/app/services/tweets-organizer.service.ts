@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 import * as _ from 'underscore';
 
-import { SentimentService } from "./sentiment.service";
+import { SentimentService } from './sentiment.service';
 
 @Injectable()
 export class TweetsOrganizerService {
@@ -14,14 +14,14 @@ export class TweetsOrganizerService {
     for (var tweet of tweets) {
       try {
         let party = tweet.user.screen_name;
-        let partyObj = _.find(this.parties,function(p){return p.name == party});
-        if(partyObj == null){
-           partyObj = {name: party, tweets:[]}
+        let partyObj = _.find(this.parties, function (p: any) {
+          return p.name == party;
+        });
+        if (partyObj == null) {
+          partyObj = { name: party, tweets: [] };
           this.parties.push(partyObj);
         }
         partyObj.tweets.push(tweet);
-
-        
       } catch (e) {
         console.log(e);
       }
